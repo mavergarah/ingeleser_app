@@ -7,4 +7,5 @@ Thumbs.db
 .env
 *~
 db-data/
+prod_settings.py
 
