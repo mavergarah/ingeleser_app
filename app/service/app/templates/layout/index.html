@@ -1,0 +1,428 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Ingeleser" />
+    <meta name="description" content="Ingeniería Electromecánica y Servicios de Colombia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="google-site-verification" content="G90N-VwghdaJdgpTSK4_Ku4rYrtcziW43HXhIXnnCQ0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon_2.png' %}">
+    <title>Ingeleser</title>
+
+    <meta property="twitter:image" content="{% static 'img/logo.png' %}">
+
+    <link href="{% static 'libs/css/royal_preloader.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'libs/js/parallax.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/royal_preloader.min.js' %}"></script>
+    <script type="text/javascript">
+        Royal_Preloader.config({
+            mode:           'number',
+            showProgress:   false,
+            background:     '#1d1d1d'
+        });
+    </script>
+
+    <link href="{% static 'libs/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'libs/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'libs/css/pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <link href="{% static 'libs/css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'libs/css/logoiconfont.css' %}" rel="stylesheet">
+    <link href="{% static 'libs/css/style.css' %}" rel="stylesheet" title="main-css">
+    <link href="{% static 'libs/css/colors/blue.css' %}" rel="stylesheet">
+</head>
+
+<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+    <div id="royal_preloader"></div>
+
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="http://ingeleser.com/">
+                            <p></p>
+                            <p></p>
+                            <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                <img id="logo" src="{% static 'img/blanco.svg' %}" style="width: 120px; height: 40px;" alt="Logo" class="pull-left" align="middle">
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home" data-id="home" class="scroll-link">Inicio</a></li>
+                            <li><a href="#ideology" data-id="ideology" class="scroll-link">Nosotros</a></li>
+                            <li><a href="#services" data-id="services" class="scroll-link">Servicios</a></li>
+                            <li><a href="#about" data-id="about" class="scroll-link">Clientes</a></li>
+                            <li><a href="#work" data-id="work" class="scroll-link">Galería</a></li>
+                            <li><a href="#contact" data-id="contact" class="scroll-link">Contáctanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="jumbotron jumbotron-main" id="home">
+        <div id="particles-js"></div>
+        <div class="container center-vertically-holder">
+            <div class="center-vertically">
+                <div id="scaleReveal" class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <figure>
+                        <img id="logo" src="{% static 'img/blanco.svg' %}" style="width: 200px; height: 60px;" alt="Logo" class="pull-center">
+                        <p></p>
+                        <p></p>
+                    </figure>
+                    <div class="ticker">
+                    {% for service in services %}
+                        <h1 style="font-size: 35px;">{{ service }}</h1>
+                    {% endfor %}
+                    </div>
+                    <hr>
+                    <p>Ingeniería Electromecánica y Servicios de Colombia.</p>
+                    <a href="#work" data-id="work" class="scroll-link btn btn-default btn-white btn-lg mt15">Nuestro trabajo <span class="ion-android-arrow-down"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="ideology">
+        <div id="hello-intro" class="pt60 pb60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4">
+                        <h2 class="no-margin rotateLeftReveal">Ingeleser.</h2>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 mt30-xs">
+                        <h3 class="no-margin rightReveal">{{ we_text }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="our-process-title" class="pt30 pb30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h4 class="no-margin">Nosotros</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="our-process">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+                        <div class="leftReveal">
+                            <div class="process-intro">
+                                <h3 class="process-number">01</h3>
+                                <div><span class="process-icons pe-7s-users rotateBottomReveal"></span></div>
+                                <h2>Misión</h2>
+                            </div>
+                            <div class="process-content">
+                                <div><span class="process-icons pe-7s-users"></span></div>
+                                <h2 class="mt15 mb20">Misión</h2>
+                                <p class="no-margin">{{ mission.description|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+                        <div class="bottomReveal">
+                            <div class="process-intro">
+                                <h3 class="process-number">02</h3>
+                                <div><span class="process-icons pe-7s-diamond rotateBottomReveal"></span></div>
+                                <h2>Visión</h2>
+                            </div>
+                            <div class="process-content">
+                                <div><span class="process-icons pe-7s-diamond"></span></div>
+                                <h2 class="mt15 mb20">Visión</h2>
+                                <p class="no-margin">{{ vision.description|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50 no-border-right">
+                        <div class="rightReveal">
+                            <div class="process-intro">
+                                <h3 class="process-number">03</h3>
+                                <div><span class="process-icons pe-7s-rocket rotateBottomReveal"></span></div>
+                                <h2>Políticas</h2>
+                            </div>
+                            <div class="process-content">
+                                <div><span class="process-icons pe-7s-rocket"></span></div>
+                                <h2 class="mt15 mb20">Políticas</h2>
+                                <p class="no-margin">{{ politics.description|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="background2 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-title text-center">
+                    <h2>Servicios</h2>
+                    <span class="section-divider"></span>
+                </div>
+            </div>
+
+            {% for service in services %}
+            <div>
+                <div class="services-box leftReveal">
+                    <span class="pe-7s-airplay services-icon"></span>
+                    <h3 class="service-name">{{ forloop.counter }}. {{ service.name }}</h3>
+
+                {% if service.description %}
+                    <p class="text-small">{{ service.description|safe }}</p>
+                {% endif %}
+                </div>
+                <br>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="about" class="background1 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-title text-center">
+                    <h2>Nuestros clientes</h2>
+                    <span class="section-divider"></span>
+                </div>
+            </div>
+
+            <div class="resp-tabs-container">
+                <div class="resp-tab-content">
+                    {% for customer in customers %}
+                        <div class="img-top">
+                            <a href="{{ customer.logo.url }}" rel="title" class="swipebox" class="item-photo">
+                                <img class ="img-top-image" src="{{ customer.logo.url }}" class="img-top-image" alt=""/>
+                                </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
+    <section id="work" class="background1 section-padding-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 section-title text-center">
+                    <h2>Galería</h2>
+                    <span class="section-divider mb15"></span>
+                </div>
+            </div>
+
+            <div class="resp-tabs-container">
+                <div class="resp-tab-content">
+                    {% for gallery_item in gallery_items %}
+                        <div class="img-top">
+                            <a href="{{ gallery_item.image.url }}" rel="title" class="swipebox" class="item-photo">
+                                <img class ="img-top-image" src="{{ gallery_item.image.url }}" class="img-top-image" alt=""/>
+                                </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
+<!--     <section id="timeline" class="background1 section-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-title text-center">
+                    <h2>Timeline</h2>
+                    <span class="section-divider"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline pb80">
+                        <li>
+                            <div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-1.jpg"></div>
+                            <div class="timeline-panel leftReveal">
+                                <div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">2015</h5>
+                                    <h4 class="subheading">We Began Our Venture</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-2.jpg"></div>
+                            <div class="timeline-panel rightReveal">
+                                <div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">April 2016</h5>
+                                    <h4 class="subheading">A Company is in Mind</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-3.jpg"></div>
+                            <div class="timeline-panel leftReveal">
+                                <div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">May 2016</h5>
+                                    <h4 class="subheading">We Launch The Hex Group</h4>
+                                </div>
+                                <div class="timeline-body"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-inverted">
+                            <div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-4.jpg"></div>
+                            <div class="timeline-panel rightReveal">
+                                <div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">July 2016</h5>
+                                    <h4 class="subheading">We Expand to 15 Employees</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="background2 section-padding">
+        <div class="container">
+            <div class="row mb30">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+                    <h2>Contáctenos</h2>
+                    <span class="section-divider mb15"></span>
+                    <p class="no-margin scaleReveal">Estamos ubicados en Mosquera, Cundinamarca, y desde allí atendemos los requerimientos de nuestros clientes en todo el país.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 col-lg-4">
+                    <h5 class="heading-1 mb20">Visítenos</h5>
+                    <h4 class="mb15">{{ address }}<br>{{ city }}
+                    </h4>
+
+                    <hr class="mini-hr">
+                    <p class="text-xs-small mb5"><strong class="text-switch">Correo electrónico:</strong> {{ email }}</p>
+                    <p class="text-xs-small mb5"><strong class="text-switch">Teléfono:</strong> {{ phone_1 }}, {{ phone_2 }}</p>
+                    <p class="text-xs-small mb5"><strong class="text-switch">Cel:</strong> {{ cell_phone }}</p>
+                </div>
+
+                <div class="col-sm-6 col-lg-7 mt30-xs">
+                    <form data-toggle="validator" id="contactForm" name="contactForm" data-contact-url="{% url 'contact_form' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <input class="form-control" data-error="Este campo es requerido."
+                                        id="msg_subject" placeholder="Asunto *" required="" type="text" name="msg_subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <input class="form-control" id="phone" placeholder="Teléfono" type="text" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb10">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <input class="form-control" data-error="Este campo es requerido." id="name" placeholder="Nombre *" required="" type="text" name="name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <input class="email form-control" data-error="Este campo es requerido." id="email" placeholder="Correo electrónico *" required="" type="email" name="email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <textarea class="form-control" data-error="Este campo es requerido." id="message" placeholder="Mensaje *" required="" rows="5" name="message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt15">
+                            <div class="col-sm-6">
+                                <div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div> 
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button type="submit" id="submit" class="btn btn-default btn-lg">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="map">
+        <iframe width="100%" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d13715.324892090188!2d-74.22121144600335!3d4.699455246339082!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8e3f77e30b64c62b%3A0x9914714bb99cbc9a!2sUnnamed+Road%2C+Mosquera%2C+Cundinamarca!3m2!1d4.6978415!2d-74.2222085!5e0!3m2!1ses!2sco!4v1528219023041" allowfullscreen>
+        </iframe>
+    </div>
+
+    <footer class="footer-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-small text-center">
+                    <hr>
+                    <button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Inicio</button>
+                    <p class="no-margin">&copy; Ingeleser</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="{% static 'libs/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/particles.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/particlesRun.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/jquery.mixitup.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/form-validator.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/jquery.inview.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/scrollreveal.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/contact_form.js' %}"></script>
+</body>
+</html>
