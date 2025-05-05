@@ -1,4 +1,4 @@
-FROM python:3.6.5
+FROM python:3.9-alpine3.20
 ARG DJANGO_ENV
 
 # Add requirements to the image.
@@ -9,7 +9,7 @@ WORKDIR /app/
 
 # Install Python requirements.
 RUN pip install --upgrade pip; \
-	pip install -r requirements/$DJANGO_ENV.txt
+	pip install -r requirements/prod.txt
 
 # Create user without privilegies.
 RUN adduser --disabled-password --gecos '' app
