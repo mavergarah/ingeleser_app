@@ -17,7 +17,7 @@ services:
       - ./app:/app
     env_file: .env
     restart: on-failure
-    command: sh ./scripts/dev.sh
+    command: sh app/scripts/dev.sh
 
   redis:
     image: redis:3.2.8

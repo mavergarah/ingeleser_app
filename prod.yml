@@ -27,7 +27,7 @@ services:
       service: app
     environment:
       - DJANGO_SETTINGS_MODULE=service.settings.prod_settings
-    command: sh ./scripts/prod.sh
+    command: sh app/scripts/prod.sh
     build:
       args:
         - DJANGO_ENV=prod
