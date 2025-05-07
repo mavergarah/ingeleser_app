@@ -9,6 +9,6 @@ tail -n 0 -f /home/app/logs/*.log &
 chown -R app:app /app
 chown -R app:app /home/app
 
-exec su -m app -c 'gunicorn service.wsgi -b :8002
+exec su -m app -c 'gunicorn service.wsgi -b :8001
 	--access-logfile /home/app/logs/gunicorn-access.log
 	--error-logfile /home/app/logs/gunicorn.log'
