@@ -17,7 +17,7 @@ services:
       - ./app:/app
     env_file: .env
     restart: on-failure
-    command: sh app/scripts/dev.sh
+    command: python manage.py runserver 0.0.0.0:8001
 
   redis:
     image: redis:3.2.8
