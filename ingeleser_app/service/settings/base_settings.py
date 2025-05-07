@@ -40,8 +40,8 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS = [
-    'app.service.app',
-    'app.service.corporativeinfo',
+    'service.app',
+    'service.corporativeinfo',
 
 ] + INSTALLED_APPS
 
