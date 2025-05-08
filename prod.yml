@@ -7,7 +7,7 @@ services:
     links:
       - app
     ports:
-      - "5001:5001"
+      - "5002:5002"
 
   postgres:
     extends:
@@ -27,6 +27,7 @@ services:
       service: app
     environment:
       - DJANGO_SETTINGS_MODULE=service.settings.prod_settings
+    command: sh ./scripts/prod.sh
     build:
       args:
         - DJANGO_ENV=prod

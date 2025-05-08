@@ -7,7 +7,7 @@ services:
     links:
       - app
     ports:
-      - "5000:5000"
+      - "5002:5002"
 
   postgres:
     extends:
@@ -32,4 +32,4 @@ services:
       - postgres
       - redis
     ports:
-      - "8000:8000"
+      - "8002:8002"
